@@ -1,17 +1,92 @@
-<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>المزاج للحماية</title></head><body style="background:#0a0a0a;margin:0;padding:20px;font-family:Tahoma;display:flex;flex-direction:column;align-items:center;">
-<div style="text-align:center;margin:20px 0;">
-<div style="width:70px;height:70px;background:linear-gradient(135deg,#667eea,#764ba2);border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:36px;margin:0 auto 10px;">🛡️</div>
-<h1 style="color:#ffffff !important;font-size:26px;">مرحباً، أنتِ بأمان الآن</h1>
-<p style="color:#22c55e !important;">✔ تم فحص الحماية - لا مخاطر حالياً</p>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALMOZAG HIMAYA</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:Tahoma,sans-serif}
+body{background:#070b18;color:#ffffff !important;min-height:100vh;padding-bottom:90px}
+a{color:#ffffff !important;text-decoration:none}
+
+/* الهيدر */
+.header{background:#0a1229;display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border-radius:0 0 18px 18px;border:1px solid #1a2a4d}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-icon{width:48px;height:48px;background:linear-gradient(135deg,#0f2a3d,#123a5a);border-radius:12px;border:2px solid #1dd6c0;display:flex;align-items:center;justify-content:center;font-weight:900;color:#1dd6c0 !important;font-size:18px}
+.logo h2{color:#ffffff !important;font-size:16px;line-height:1.1}
+.logo span{color:#6b8ab0 !important;font-size:11px}
+.wa-btn{background:#22c55e;color:#ffffff !important;padding:8px 14px;border-radius:20px;font-size:13px;font-weight:900;display:flex;align-items:center;gap:5px}
+
+/* كارت الترحيب */
+.welcome{width:94%;margin:16px auto;background:linear-gradient(135deg,#122042,#1a2f6a);border-radius:18px;padding:18px;display:flex;align-items:center;gap:14px;border:1px solid #2a4a8a}
+.welcome-icon{width:60px;height:60px;background:#0f1b36;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:32px;border:1px solid #3b82f6}
+.welcome h3{color:#ffffff !important;font-size:20px;font-weight:900}
+.welcome p{color:#7ab0ff !important;font-size:12px;margin-top:4px}
+
+/* العنوان */
+.section-title{width:94%;margin:10px auto;color:#ffffff !important;font-size:20px;font-weight:900}
+
+/* الشبكة */
+.grid{width:94%;margin:10px auto;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.card{background:#131e3a;border-radius:18px;padding:18px 14px;height:145px;display:flex;flex-direction:column;justify-content:space-between;border:1px solid #1e2f5a;cursor:pointer}
+.card-icon{font-size:36px}
+.card h4{color:#ffffff !important;font-size:15px;font-weight:900;line-height:1.3;margin-top:10px}
+.card p{color:#8aa0c5 !important;font-size:10px;margin-top:4px;line-height:1.4}
+.card.active{background:linear-gradient(135deg,#e77a9a,#8b5cf6,#5aa9ff);border:none}
+.card.active h4, .card.active p, .card.active .card-icon{color:#ffffff !important}
+
+/* الناف بار */
+.bottom-nav{position:fixed;bottom:10px;left:3%;right:3%;background:#111b33;border-radius:22px;display:flex;justify-content:space-around;padding:12px 10px;border:1px solid #1e2f5a}
+.nav-item{text-align:center;color:#6b7ea3 !important;font-size:11px}
+.nav-item.active{color:#ffffff !important}
+.nav-item div{font-size:22px;margin-bottom:2px}
+</style>
+</head>
+<body>
+
+<div class="header">
+<div class="logo">
+<div class="logo-icon">AM</div>
+<div><h2>ALMOZAG<br>HIMAYA</h2><span>حماية البنات</span></div>
 </div>
-<div style="background:#1e293b;border:2px solid #ec4899;border-radius:20px;padding:20px;width:100%;max-width:480px;">
-<h2 style="color:#ffffff !important;text-align:center;margin-bottom:15px;">🔒 تأمين فوري</h2>
-<div style="color:#ffffff !important;background:rgba(255,255,255,0.07);padding:10px;border-radius:8px;margin:6px 0;">1. غيري كل الباسوردات</div>
-<div style="color:#ffffff !important;background:rgba(255,255,255,0.07);padding:10px;border-radius:8px;margin:6px 0;">2. فعلي التحقق بخطوتين</div>
-<div style="color:#ffffff !important;background:rgba(255,255,255,0.07);padding:10px;border-radius:8px;margin:6px 0;">3. اقفلي طلبات الرسائل</div>
-<div style="color:#ffffff !important;background:rgba(255,255,255,0.07);padding:10px;border-radius:8px;margin:6px 0;">4. متبعتيش فلوس</div>
-<div style="color:#ffffff !important;background:rgba(255,255,255,0.07);padding:10px;border-radius:8px;margin:6px 0;">5. اتصلي 108 مباحث انترنت</div>
-<a href="https://wa.me/201552780911" style="color:#00ff88 !important;display:block;text-align:center;margin:18px 0;font-size:18px;font-weight:bold;text-decoration:none;">💬 كلمينا واتساب فوراً: 01552780911</a>
-<a href="https://wa.me/201552780911" style="display:block;width:100%;background:linear-gradient(90deg,#ec4899,#8b5cf6);color:#ffffff !important;text-align:center;padding:14px;border-radius:12px;text-decoration:none;font-size:20px;font-weight:bold;">تمام</a>
+<a class="wa-btn" href="https://wa.me/201552780911">🟢 تواصل معانا</a>
 </div>
-</body></html>
+
+<div class="welcome">
+<div class="welcome-icon">🛡️</div>
+<div><h3>مرحباً، أنتِ بأمان الآن</h3><p>تم تفعيل الحماية — نراقب لحمايتك 24/7</p></div>
+</div>
+
+<div class="section-title">أدوات الحماية</div>
+
+<div class="grid">
+<div class="card" onclick="alert('مدقق الصور - قريباً')">
+<div class="card-icon">📷</div>
+<div><h4>مدقق تزوير الصور</h4><p>اكتشفي الصور المعدلة بالذكاء الاصطناعي</p></div>
+</div>
+
+<div class="card" onclick="alert('محلل التهديدات')">
+<div class="card-icon">🎯</div>
+<div><h4>محلّل التهديدات</h4><p>تحليل الروابط والرسائل المشبوهة</p></div>
+</div>
+
+<div class="card active" onclick="window.open('https://wa.me/201552780911')">
+<div class="card-icon">🔒</div>
+<div><h4>القفل الطارئ</h4><p>قفل الجهاز وحجب الاتصال فوراً</p></div>
+</div>
+
+<div class="card" onclick="alert('مولد التقارير')">
+<div class="card-icon">📄</div>
+<div><h4>موّلد التقارير</h4><p>إنشاء تقرير مفصل للمشاركة</p></div>
+</div>
+</div>
+
+<div class="bottom-nav">
+<div class="nav-item active"><div>🏠</div>الرئيسية</div>
+<div class="nav-item"><div>⊞</div>الأدوات</div>
+<div class="nav-item"><div>🔔</div>التنبيهات</div>
+<div class="nav-item"><div>👤</div>حسابي</div>
+</div>
+
+</body>
+</html>
