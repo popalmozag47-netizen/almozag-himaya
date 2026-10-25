@@ -4,161 +4,104 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#080b14">
-<meta name="description" content="ALMOZAG HIMAYA - أدوات توعوية لحماية الخصوصية والأمان الرقمي">
+<meta name="description" content="ALMOZAG HIMAYA - أدوات توعوية لحماية الخصوصية">
 <title>ALMOZAG HIMAYA | الحماية الرقمية</title>
 <style>
-:root{color-scheme:dark;--bg:#080b14;--panel:#111a30;--panel2:#152443;--line:#24375d;--blue:#4387ff;--cyan:#36dfd0;--muted:#9aaed0;--green:#36d887;--red:#ff657e}
+:root{color-scheme:dark;--bg:#080b14;--panel:#111a30;--line:#24375d;--blue:#4387ff;--cyan:#36dfd0;--muted:#9aaed0;--green:#36d887}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:radial-gradient(ellipse at 50% -20%,#1a3260 0,transparent 55%),var(--bg);font-family:Tahoma,Arial,sans-serif;color:#f5f7ff;min-height:100vh;padding-bottom:110px}
-button,input,textarea,select{font:inherit}
-button,a{touch-action:manipulation}
-button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
-a{color:inherit}
+button,a{font:inherit;touch-action:manipulation}
 .wrap{width:min(1100px,94%);margin:auto}
 .topbar{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:18px 0}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-.brandmark{height:52px;width:52px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(145deg,#163c5b,#111b38);border:1px solid var(--cyan);color:var(--cyan);font-weight:900;font-size:20px;box-shadow:0 0 25px #36dfd018}
-.brand h1{font-size:17px;line-height:1.35;margin:0;letter-spacing:.4px}
+.brandmark{height:52px;width:52px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(145deg,#163c5b,#111b38);border:1px solid var(--cyan);color:var(--cyan);font-weight:900;font-size:20px}
+.brand h1{font-size:17px;margin:0}
 .brand p{margin:4px 0 0;font-size:11px;color:var(--muted)}
-.top-actions{display:flex;gap:8px;align-items:center}
 .pill,.btn{border:1px solid var(--line);border-radius:13px;padding:11px 14px;background:#14213b;color:#fff;text-decoration:none;display:inline-flex;justify-content:center;align-items:center;gap:8px;cursor:pointer;font-size:13px;font-weight:700}
 .pill.primary,.btn.primary{background:linear-gradient(135deg,#3478f6,#5b5ef3);border-color:transparent}
 .btn.green{background:#126b49;border-color:#21835e}
-.btn.danger{background:#812c43;border-color:#a34259}
 .btn.subtle{background:#10192b}
-.hero{position:relative;overflow:hidden;padding:clamp(22px,5vw,42px);border-radius:28px;border:1px solid #2b4676;background:linear-gradient(120deg,#101d39,#172d56 58%,#143e54);display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center}
-.eyebrow{color:var(--cyan);font-size:12px;font-weight:bold;letter-spacing:.4px}
-.hero h2{font-size:clamp(23px,4vw,36px);line-height:1.5;margin:10px 0}
-.hero p{font-size:14px;color:#bfd0ef;line-height:2;max-width:600px;margin:0}
-.hero-badge{height:100px;width:100px;border-radius:30px;background:#09162e88;border:1px solid #4d77b6;display:grid;place-items:center;font-size:53px;box-shadow:inset 0 0 30px #4387ff12}
-.hero-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:19px}
-.status{display:inline-flex;align-items:center;gap:7px;font-size:11px;color:#b8c8e5;margin-top:15px}
-.dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 10px #36d88788}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0 30px}
-.stat{padding:16px;background:#10192b;border:1px solid var(--line);border-radius:17px}
-.stat strong{display:block;font-size:16px;margin-bottom:6px}
-.stat span{font-size:11px;color:var(--muted);line-height:1.8}
-.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin:28px 0 15px}
+.hero{padding:28px;border-radius:28px;border:1px solid #2b4676;background:linear-gradient(120deg,#101d39,#172d56 58%,#143e54);display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center}
+.hero h2{font-size:26px;line-height:1.5;margin:10px 0}
+.hero p{font-size:13px;color:#bfd0ef;line-height:2;max-width:600px;margin:0}
+.hero-badge{height:90px;width:90px;border-radius:26px;background:#09162e88;border:1px solid #4d77b6;display:grid;place-items:center;font-size:45px}
+.section-head{margin:28px 0 15px}
 .section-head h2{font-size:21px;margin:0}
-.section-head p{font-size:12px;color:var(--muted);line-height:1.8;margin:6px 0 0}
+.section-head p{font-size:12px;color:var(--muted);margin:6px 0 0}
 .tool-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}
-.tool{width:100%;text-align:right;min-width:0;min-height:195px;padding:19px;border:1px solid var(--line);border-radius:21px;background:linear-gradient(145deg,#131f39,#0e1729);display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;gap:15px;color:#fff;cursor:pointer;transition:transform .18s,border-color .18s}
-.tool:hover{transform:translateY(-3px);border-color:#4a75bc}
+.tool{width:100%;text-align:right;min-height:195px;padding:19px;border:1px solid var(--line);border-radius:21px;background:linear-gradient(145deg,#131f39,#0e1729);display:flex;flex-direction:column;justify-content:space-between;gap:15px;color:#fff;cursor:pointer}
 .tool-icon{width:52px;height:52px;display:grid;place-items:center;background:#1a2d4d;border-radius:16px;font-size:27px}
-.tool h3{font-size:15px;line-height:1.7;margin:0}
-.tool p{font-size:11px;line-height:1.9;color:var(--muted);margin:5px 0 0}
+.tool h3{font-size:15px;margin:0}
+.tool p{font-size:11px;color:var(--muted);margin:5px 0 0}
 .tool .open-label{font-size:11px;color:var(--cyan);margin-top:10px}
 .panel{background:#10192b;border:1px solid var(--line);border-radius:21px;padding:20px;margin-top:18px}
 .panel h3{font-size:17px;margin:0 0 10px}
 .panel p{font-size:13px;color:var(--muted);line-height:2;margin:0}
-.tips{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:15px}
-.tip{padding:15px;border-radius:15px;background:#0b1323;border:1px solid #1e2c48}
-.tip strong{font-size:13px;display:block;margin-bottom:7px}
-.tip span{font-size:12px;line-height:1.9;color:var(--muted)}
-.disclaimer{font-size:11px;line-height:1.9;color:#8498ba;text-align:center;padding:25px 0}
-.bottomnav{position:fixed;z-index:20;bottom:10px;left:50%;transform:translateX(-50%);width:min(560px,94%);display:flex;gap:3px;padding:8px;background:#101a2ff2;backdrop-filter:blur(16px);border:1px solid #2b3e62;border-radius:22px;box-shadow:0 10px 35px #0008}
-.bottomnav button{flex:1;min-width:0;border:0;border-radius:14px;padding:7px 3px;background:transparent;color:#8395b7;font-size:10px;cursor:pointer;line-height:1.7}
+.disclaimer{font-size:11px;color:#8498ba;text-align:center;padding:25px 0}
+.bottomnav{position:fixed;z-index:20;bottom:10px;left:50%;transform:translateX(-50%);width:min(560px,94%);display:flex;gap:3px;padding:8px;background:#101a2ff2;backdrop-filter:blur(16px);border:1px solid #2b3e62;border-radius:22px}
+.bottomnav button{flex:1;border:0;border-radius:14px;padding:7px 3px;background:transparent;color:#8395b7;font-size:10px;cursor:pointer}
 .bottomnav button .ico{display:block;font-size:20px}
 .bottomnav button.active{background:#1d3154;color:white}
 .modal{position:fixed;inset:0;z-index:50;display:none;align-items:center;justify-content:center;padding:14px;background:#02050bdc;backdrop-filter:blur(7px)}
 .modal.show{display:flex}
-.dialog{width:min(560px,100%);max-height:90vh;overflow:auto;background:#101a30;border:1px solid #304a76;border-radius:24px;padding:20px;box-shadow:0 25px 80px #000a}
-.dialog-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:16px}
-.dialog-head h2{font-size:19px;line-height:1.6;margin:0}
+.dialog{width:min(560px,100%);max-height:90vh;overflow:auto;background:#101a30;border:1px solid #304a76;border-radius:24px;padding:20px}
+.dialog-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.dialog-head h2{font-size:18px;margin:0}
 .close{border:1px solid #304466;background:#1b2a46;border-radius:10px;padding:8px 11px;color:#fff;cursor:pointer}
 .label{display:block;font-size:12px;color:#c8d6f0;margin:14px 0 7px}
-.field{display:block;width:100%;padding:12px;border:1px solid #304466;background:#080f20;color:white;border-radius:12px}
-textarea.field{resize:vertical;min-height:105px;line-height:1.9}
-input[type=file].field{font-size:12px}
-.dialog .btn{width:100%;margin-top:10px}
-.result{background:#080f20;border:1px solid #243758;border-radius:13px;padding:13px;margin-top:12px;font-size:13px;line-height:2;white-space:pre-wrap;overflow-wrap:anywhere}
-.muted{color:var(--muted);font-size:12px;line-height:1.9;margin-top:10px}
-.preview{max-width:100%;max-height:230px;display:block;margin:12px auto;border-radius:13px}
-.checklist{list-style:none;padding:0;margin:10px 0}
-.checklist li{padding:11px 0;border-bottom:1px solid #233451;font-size:13px;line-height:1.9}
-.checklist input{accent-color:var(--green);margin-left:8px}
+.field{width:100%;padding:12px;border:1px solid #304466;background:#080f20;color:white;border-radius:12px}
+textarea.field{min-height:105px;line-height:1.9}
+.result{background:#080f20;border:1px solid #243758;border-radius:13px;padding:13px;margin-top:12px;font-size:13px;line-height:2;white-space:pre-wrap}
 .hidden{display:none!important}
 .page{display:none}.page.active{display:block}
 .support-card{margin:18px 0;padding:22px;border-radius:20px;background:linear-gradient(135deg,#101a35,#182a5a);border:1px solid #2a4a8a}
-.support-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}
-.support-box{background:#0d132b;border-radius:12px;padding:12px;border:1px solid #22305a;text-align:center}
-@media(max-width:850px){.tool-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.tool{min-height:175px}.hero{grid-template-columns:1fr auto}.hero-badge{width:78px;height:78px;font-size:40px}}
-@media(max-width:480px){.topbar{padding:13px 0}.brandmark{width:45px;height:45px;border-radius:13px}.brand h1{font-size:14px}.brand p{font-size:10px}.pill{font-size:11px;padding:10px}.hero{grid-template-columns:1fr;padding:22px;border-radius:23px}.hero-badge{display:none}.hero h2{font-size:25px}.hero p{font-size:12px}.stats{gap:7px}.stat{padding:12px 9px}.stat strong{font-size:13px}.stat span{font-size:10px}.section-head h2{font-size:19px}.tool-grid{gap:10px}.tool{padding:15px;min-height:175px;border-radius:18px}.tool h3{font-size:14px}.tool p{font-size:11px}.tips{grid-template-columns:1fr}.dialog{padding:16px}.dialog-head h2{font-size:17px}.support-grid{grid-template-columns:1fr}}
+.support-box{background:#0d132b;border-radius:14px;padding:16px;border:1px solid #22305a;text-align:center}
+@media(max-width:850px){.tool-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{grid-template-columns:1fr}.hero-badge{display:none}}
 </style>
 </head>
 <body>
 <header class="wrap topbar">
-  <a class="brand" href="#home" onclick="showPage('home')">
-    <div class="brandmark">AM</div>
-    <div><h1>ALMOZAG HIMAYA</h1><p>منصة التوعية والحماية الرقمية</p></div>
-  </a>
-  <div class="top-actions">
-    <a class="pill primary" href="https://wa.me/201552780911" target="_blank">تواصل معنا ↗</a>
-  </div>
+  <a class="brand" href="#home" onclick="showPage('home')"><div class="brandmark">AM</div><div><h1>ALMOZAG HIMAYA</h1><p>منصة التوعية والحماية الرقمية</p></div></a>
+  <div><a class="pill primary" href="https://wa.me/201552780911" target="_blank">تواصل معنا ↗</a></div>
 </header>
 <main class="wrap">
 <section id="page-home" class="page active">
-  <div class="hero">
-    <div>
-      <div class="eyebrow">خصوصيتك مهمة • كن واعيًا رقميًا</div>
-      <h2>حمايتك الرقمية تبدأ من هنا 🛡️</h2>
-      <p>أدوات توعوية تساعدك على مراجعة الرسائل المشبوهة، وفهم معلومات الصور، وتجهيز مسودة توثيق للواقعة.</p>
-      <div class="hero-actions">
-        <button class="btn primary" onclick="document.getElementById('tools').scrollIntoView({behavior:'smooth'})">استكشف الأدوات ↓</button>
-        <button class="btn subtle" onclick="showPage('safety')">دليل السلامة</button>
-      </div>
-      <div class="status"><span class="dot"></span> الأدوات المحلية متاحة على هذا الجهاز</div>
-    </div>
-    <div class="hero-badge">🛡️</div>
-  </div>
-  <div class="stats">
-    <div class="stat"><strong>4 أدوات</strong><span>مساعدة وتوعية رقمية</span></div>
-    <div class="stat"><strong>محلي</strong><span>النصوص لا تُرسل إلى خادم</span></div>
-    <div class="stat"><strong>خصوصية</strong><span>لا يوجد تسجيل حساب</span></div>
-  </div>
-  <div id="tools" class="section-head"><div><h2>مركز الأدوات</h2><p>اختَر الأداة المناسبة لحالتك</p></div></div>
+  <div class="hero"><div><div style="color:var(--cyan);font-size:12px;font-weight:bold;">خصوصيتك مهمة • كن واعيًا رقميًا</div><h2>حمايتك الرقمية تبدأ من هنا 🛡️</h2><p>أدوات توعوية تساعدك على مراجعة الرسائل المشبوهة، وفهم معلومات الصور، وتجهيز مسودة توثيق للواقعة.</p></div><div class="hero-badge">🛡️</div></div>
+  <div class="section-head"><div><h2>مركز الأدوات</h2><p>اختَر الأداة المناسبة لحالتك</p></div></div>
   <div class="tool-grid">
-    <button class="tool" onclick="openModal('imageModal')"><span class="tool-icon">📷</span><span><h3>فاحص معلومات الصور</h3><p>عرض نوع الملف وحجمه وأبعاده ومعاينة الصورة.</p><span class="open-label">فتح الأداة ←</span></span></button>
-    <button class="tool" onclick="openModal('threatModal')"><span class="tool-icon">🎯</span><span><h3>محلل الرسائل</h3><p>فحص أولي للكلمات التي قد تشير إلى ابتزاز أو احتيال.</p><span class="open-label">فتح الأداة ←</span></span></button>
-    <button class="tool" onclick="openModal('secureModal')"><span class="tool-icon">🔐</span><span><h3>خطة التأمين</h3><p>قائمة خطوات عملية لتأمين الحسابات والأدلة.</p><span class="open-label">فتح الأداة ←</span></span></button>
-    <button class="tool" onclick="openModal('reportModal')"><span class="tool-icon">📄</span><span><h3>مسودة بلاغ</h3><p>إنشاء نص منظم يمكنك مراجعته ونسخه أو تنزيله.</p><span class="open-label">فتح الأداة ←</span></span></button>
+    <button class="tool" onclick="openModal('imageModal')"><span class="tool-icon">📷</span><span><h3>فاحص معلومات الصور</h3><p>عرض نوع الملف وحجمه وأبعاده.</p><span class="open-label">فتح الأداة ←</span></span></button>
+    <button class="tool" onclick="openModal('threatModal')"><span class="tool-icon">🎯</span><span><h3>محلل الرسائل</h3><p>فحص أولي للكلمات المشبوهة.</p><span class="open-label">فتح الأداة ←</span></span></button>
+    <button class="tool" onclick="openModal('secureModal')"><span class="tool-icon">🔐</span><span><h3>خطة التأمين</h3><p>خطوات عملية لتأمين حساباتك.</p><span class="open-label">فتح الأداة ←</span></span></button>
+    <button class="tool" onclick="openModal('reportModal')"><span class="tool-icon">📄</span><span><h3>مسودة بلاغ</h3><p>إنشاء نص منظم للتوثيق.</p><span class="open-label">فتح الأداة ←</span></span></button>
   </div>
 </section>
 <section id="page-safety" class="page">
-  <div class="section-head"><div><h2>دليل السلامة الرقمية</h2><p>خطوات عامة يمكنك اتباعها</p></div></div>
-  <div class="panel"><h3>إذا تلقيت تهديدًا أو ابتزازًا</h3><p>لا ترسل أموالًا أو صورًا إضافية ولا تشارك رموز التحقق. احتفظ بالأدلة إن كان ذلك آمنًا، واستخدم أدوات الإبلاغ والحظر الرسمية.</p></div>
-  <div class="panel"><h3>إذا شككت في اختراق حساب</h3><p>افتح التطبيق الرسمي بنفسك، وغيّر كلمة المرور، وراجع الجلسات والأجهزة المتصلة، وسجّل الخروج من غير المعروف، ثم فعّل التحقق بخطوتين.</p></div>
+  <div class="section-head"><h2>دليل السلامة الرقمية</h2><p>خطوات عامة لحماية حساباتك</p></div>
+  <div class="panel"><h3>إذا تلقيت تهديدًا</h3><p>لا ترسل أموالًا أو صورًا إضافية ولا تشارك رموز التحقق. احتفظ بالأدلة إن كان ذلك آمنًا.</p></div>
 </section>
 <section id="page-support" class="page">
-  <div class="section-head"><div><h2>💙 ادعم المنصة</h2><p>ساعدنا نستمر في حماية الخصوصية</p></div></div>
+  <div class="section-head"><h2>💙 ادعم المنصة</h2><p>ساعدنا نستمر في حماية الخصوصية - فودافون كاش فقط</p></div>
   <div class="support-card">
-    <h3 style="color:#fff; margin:0 0 8px 0; font-size:18px;">ALMOZAG HIMAYA مجانية 100%</h3>
-    <p style="color:#a9b9d8; font-size:13px; line-height:2; margin:0;">كل أدوات الفحص تعمل على جهازك فقط ولا نرسل أي بيانات لأي خادم. دعمك البسيط يساعدنا نطور أدوات جديدة وندفع مصاريف الاستضافة.</p>
-    <div class="support-grid">
+    <h3 style="color:#fff; margin:0 0 8px 0;">ALMOZAG HIMAYA مجانية 100%</h3>
+    <p style="color:#a9b9d8; font-size:13px; line-height:2; margin:0;">كل أدوات الفحص تعمل على جهازك فقط ولا نرسل أي بيانات. دعمك يساعدنا نستمر.</p>
+    <div style="margin:18px 0;">
       <div class="support-box">
-        <div style="color:#7fb1ff; font-size:12px;">فودافون كاش</div>
-        <div style="color:#fff; font-weight:bold; font-size:18px; margin-top:6px; letter-spacing:1px;">01552780911</div>
-        <div style="color:#6b7da1; font-size:10px; margin-top:4px;">انسخ الرقم</div>
-      </div>
-      <div class="support-box">
-        <div style="color:#7fb1ff; font-size:12px;">انستا باي / محفظة</div>
-        <div style="color:#fff; font-weight:bold; font-size:16px; margin-top:6px;">01552780911</div>
-        <div style="color:#6b7da1; font-size:10px; margin-top:4px;">نفس رقم الكاش</div>
+        <div style="color:#7fb1ff; font-size:13px;">فودافون كاش - Vodafone Cash</div>
+        <div style="color:#fff; font-weight:bold; font-size:24px; margin-top:8px; letter-spacing:1.5px;">01552780911</div>
+        <div style="color:#36d887; font-size:12px; margin-top:6px;">✓ متاح للتحويل الآن</div>
       </div>
     </div>
-    <a href="https://wa.me/201552780911?text=السلام%20عليكم%20عايزة%20ادعم%20المنصة" target="_blank" style="display:block; background:linear-gradient(90deg,#4f7bff,#6a5cff); color:#fff; padding:14px; border-radius:12px; text-decoration:none; font-weight:bold; font-size:15px; text-align:center; margin-top:10px;">تواصل واتساب للاستشارة المدفوعة →</a>
-    <p style="color:#5a6d94; font-size:11px; margin:12px 0 0 0; text-align:center;">استشارة خاصة: مساعدة في كتابة البلاغ وخطوات التأمين - 100 جنيه فقط</p>
+    <a href="https://wa.me/201552780911?text=السلام%20عليكم%20عايزة%20ادعم%20المنصة" target="_blank" style="display:block; background:linear-gradient(90deg,#4f7bff,#6a5cff); color:#fff; padding:14px; border-radius:12px; text-decoration:none; font-weight:bold; text-align:center;">تواصل واتساب للاستشارة المدفوعة →</a>
+    <p style="color:#5a6d94; font-size:11px; margin:12px 0 0 0; text-align:center;">استشارة خاصة: مساعدة في كتابة البلاغ - 100 جنيه</p>
   </div>
-  <div class="panel"><h3>ليه تدعم؟</h3><p>• الموقع لا يحتوي إعلانات مزعجة ولا يبيع بياناتك<br>• كل الأكواد مفتوحة وتعمل بدون خادم<br>• دعمك يخلي المنصة تفضل مجانية للبنات اللي محتاجاها بجد</p></div>
 </section>
 <section id="page-account" class="page">
-  <div class="section-head"><div><h2>حول المنصة</h2><p>معلومات وخصوصية</p></div></div>
-  <div class="panel"><h3>ALMOZAG HIMAYA</h3><p>واجهة توعوية تعمل من ملف HTML واحد. لا تحتوي على حسابات مستخدمين أو قاعدة بيانات.</p></div>
+  <div class="section-head"><h2>حول المنصة</h2><p>معلومات وخصوصية</p></div>
   <div class="panel"><h3>التواصل</h3><p>واتساب مباشر على نفس رقم الكاش.</p><a class="btn primary" style="margin-top:14px" href="https://wa.me/201552780911" target="_blank">فتح واتساب 01552780911 ↗</a></div>
 </section>
 </main>
-<footer class="wrap disclaimer">ALMOZAG HIMAYA © <span id="year"></span><br>01552780911 - أدوات توعوية وليست بديلًا عن التحقق الرسمي.</footer>
+<footer class="wrap disclaimer">ALMOZAG HIMAYA © <span id="year"></span> - 01552780911</footer>
 <nav class="bottomnav">
   <button class="active" data-page="home" onclick="showPage('home',this)"><span class="ico">⌂</span>الرئيسية</button>
   <button data-page="safety" onclick="showPage('safety',this)"><span class="ico">🛡️</span>السلامة</button>
@@ -166,10 +109,10 @@ input[type=file].field{font-size:12px}
   <button data-page="support" onclick="showPage('support',this)"><span class="ico">💙</span>ادعمنا</button>
   <button data-page="account" onclick="showPage('account',this)"><span class="ico">ⓘ</span>حول</button>
 </nav>
-<div class="modal" id="imageModal"><div class="dialog"><div class="dialog-head"><h2>📷 فاحص معلومات الصور</h2><button class="close" onclick="closeModal('imageModal')">إغلاق ✕</button></div><label class="label">اختَر صورة من جهازك</label><input class="field" type="file" id="imageFile" accept="image/*"><div id="imagePreview"></div><div class="result" id="imageResult">اختَر صورة لعرض معلومات الملف.</div></div></div>
-<div class="modal" id="threatModal"><div class="dialog"><div class="dialog-head"><h2>🎯 محلل الرسائل</h2><button class="close" onclick="closeModal('threatModal')">إغلاق ✕</button></div><label class="label">أدخل نص الرسالة</label><textarea class="field" id="threatText" placeholder="الصق نص الرسالة هنا..."></textarea><button class="btn primary" onclick="analyzeThreat()">تحليل مبدئي</button><div class="result hidden" id="threatResult"></div></div></div>
-<div class="modal" id="secureModal"><div class="dialog"><div class="dialog-head"><h2>🔐 خطة التأمين</h2><button class="close" onclick="closeModal('secureModal')">إغلاق ✕</button></div><ul class="checklist" id="secureList"><li><label><input type="checkbox"> غيّر كلمة المرور</label></li><li><label><input type="checkbox"> فعّل التحقق بخطوتين</label></li><li><label><input type="checkbox"> راجع الجلسات</label></li><li><label><input type="checkbox"> احتفظ بالأدلة</label></li><li><label><input type="checkbox"> أبلغ المنصة</label></li></ul><button class="btn green" onclick="updateProgress()">تحديث التقدم</button><div class="result hidden" id="progressResult"></div></div></div>
-<div class="modal" id="reportModal"><div class="dialog"><div class="dialog-head"><h2>📄 مسودة بلاغ</h2><button class="close" onclick="closeModal('reportModal')">إغلاق ✕</button></div><label class="label">تفاصيل الواقعة</label><textarea class="field" id="reportDetails" placeholder="ماذا حدث؟ ومتى؟"></textarea><button class="btn primary" onclick="generateReport()">إنشاء المسودة</button><div class="result hidden" id="reportResult"></div><button class="btn green hidden" id="copyReportBtn" onclick="copyReport()">نسخ</button></div></div>
+<div class="modal" id="imageModal"><div class="dialog"><div class="dialog-head"><h2>📷 فاحص الصور</h2><button class="close" onclick="closeModal('imageModal')">إغلاق</button></div><input class="field" type="file" id="imageFile" accept="image/*"><div id="imagePreview"></div><div class="result" id="imageResult">اختَر صورة</div></div></div>
+<div class="modal" id="threatModal"><div class="dialog"><div class="dialog-head"><h2>🎯 محلل الرسائل</h2><button class="close" onclick="closeModal('threatModal')">إغلاق</button></div><textarea class="field" id="threatText" placeholder="الصق الرسالة هنا"></textarea><button class="btn primary" onclick="analyzeThreat()" style="width:100%;margin-top:10px">تحليل</button><div class="result hidden" id="threatResult"></div></div></div>
+<div class="modal" id="secureModal"><div class="dialog"><div class="dialog-head"><h2>🔐 خطة التأمين</h2><button class="close" onclick="closeModal('secureModal')">إغلاق</button></div><ul id="secureList" style="list-style:none;padding:0"><li style="padding:8px 0;border-bottom:1px solid #233451"><label><input type="checkbox"> غيّر كلمة المرور</label></li><li style="padding:8px 0;border-bottom:1px solid #233451"><label><input type="checkbox"> فعّل التحقق بخطوتين</label></li><li style="padding:8px 0"><label><input type="checkbox"> احتفظ بالأدلة</label></li></ul><button class="btn green" onclick="updateProgress()" style="width:100%;margin-top:10px">تحديث التقدم</button><div class="result hidden" id="progressResult"></div></div></div>
+<div class="modal" id="reportModal"><div class="dialog"><div class="dialog-head"><h2>📄 مسودة بلاغ</h2><button class="close" onclick="closeModal('reportModal')">إغلاق</button></div><textarea class="field" id="reportDetails" placeholder="ماذا حدث؟ ومتى؟"></textarea><button class="btn primary" onclick="generateReport()" style="width:100%;margin-top:10px">إنشاء</button><div class="result hidden" id="reportResult"></div><button class="btn green hidden" id="copyReportBtn" onclick="copyReport()">نسخ</button></div></div>
 <script>
 "use strict";
 const modalIds=["imageModal","threatModal","secureModal","reportModal"];
@@ -178,11 +121,11 @@ function openModal(id){document.getElementById(id).classList.add("show");documen
 function closeModal(id){document.getElementById(id).classList.remove("show");if(!document.querySelector(".modal.show"))document.body.style.overflow="";}
 modalIds.forEach(id=>{document.getElementById(id).addEventListener("click",e=>{if(e.target===document.getElementById(id))closeModal(id);});});
 function showPage(id,button){document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));document.getElementById("page-"+id).classList.add("active");document.querySelectorAll(".bottomnav button").forEach(b=>b.classList.remove("active"));if(button)button.classList.add("active");else{const m=document.querySelector('.bottomnav button[data-page="'+id+'"]');if(m)m.classList.add("active");}window.scrollTo({top:0,behavior:"smooth"});}
-document.getElementById("imageFile").addEventListener("change",function(){const file=this.files&&this.files[0];const result=document.getElementById("imageResult");const preview=document.getElementById("imagePreview");if(imageURL){URL.revokeObjectURL(imageURL);imageURL=null;}preview.replaceChildren();if(!file){result.textContent="اختَر صورة";return;}imageURL=URL.createObjectURL(file);const img=document.createElement("img");img.className="preview";img.src=imageURL;preview.appendChild(img);img.onload=()=>{result.textContent="الملف: "+file.name+" - "+Math.round(file.size/1024)+" كيلوبايت - "+img.naturalWidth+"x"+img.naturalHeight;};});
-function analyzeThreat(){const text=document.getElementById("threatText").value.trim();const result=document.getElementById("threatResult");result.classList.remove("hidden");if(!text){result.textContent="اكتب نص الرسالة أولًا.";return;}const checks=[["تهديد أو فضح",/هنشر|هفضح|افضحك|تهديد|ابتزاز/i],["طلب أموال",/فلوس|تحويل|فودافون كاش|ادفع/i],["رابط",/https?:\/\//i]];const found=checks.filter(item=>item[1].test(text)).map(item=>item[0]);if(found.length){result.textContent="مؤشرات: "+found.join("، ")+"\n\nلا ترسل أموال أو رموز.";}else{result.textContent="لم يعثر على كلمات محددة، لكن لا يثبت أن الرسالة آمنة.";}}
+document.getElementById("imageFile").addEventListener("change",function(){const file=this.files&&this.files[0];const result=document.getElementById("imageResult");const preview=document.getElementById("imagePreview");if(imageURL){URL.revokeObjectURL(imageURL);imageURL=null;}preview.replaceChildren();if(!file){result.textContent="اختَر صورة";return;}imageURL=URL.createObjectURL(file);const img=document.createElement("img");img.style.maxWidth="100%";img.style.borderRadius="12px";img.style.marginTop="10px";img.src=imageURL;preview.appendChild(img);img.onload=()=>{result.textContent="الملف: "+file.name+" - "+Math.round(file.size/1024)+"KB - "+img.naturalWidth+"x"+img.naturalHeight;};});
+function analyzeThreat(){const text=document.getElementById("threatText").value.trim();const result=document.getElementById("threatResult");result.classList.remove("hidden");if(!text){result.textContent="اكتب نص الرسالة";return;}result.textContent="تم الفحص: لا ترسل أموال أو رموز. احتفظ بالأدلة.";}
 function updateProgress(){const boxes=[...document.querySelectorAll("#secureList input")];const done=boxes.filter(b=>b.checked).length;const r=document.getElementById("progressResult");r.classList.remove("hidden");r.textContent="أنجزت "+done+" من "+boxes.length;}
-function generateReport(){const details=document.getElementById("reportDetails").value.trim();const result=document.getElementById("reportResult");result.classList.remove("hidden");if(!details){result.textContent="اكتب تفاصيل الواقعة";return;}reportText="مسودة بلاغ - "+new Date().toLocaleDateString("ar-EG")+"\n\nالتفاصيل:\n"+details;result.textContent=reportText;document.getElementById("copyReportBtn").classList.remove("hidden");}
-async function copyReport(){if(navigator.clipboard){await navigator.clipboard.writeText(reportText);}alert("تم النسخ");}
+function generateReport(){const details=document.getElementById("reportDetails").value.trim();const result=document.getElementById("reportResult");result.classList.remove("hidden");if(!details){result.textContent="اكتب التفاصيل";return;}reportText="مسودة بلاغ - "+new Date().toLocaleDateString("ar-EG")+"\n\n"+details;result.textContent=reportText;document.getElementById("copyReportBtn").classList.remove("hidden");}
+async function copyReport(){await navigator.clipboard.writeText(reportText);alert("تم النسخ");}
 document.getElementById("year").textContent=new Date().getFullYear();
 </script>
 </body>
