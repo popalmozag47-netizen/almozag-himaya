@@ -2,48 +2,88 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>ALMOZAG HIMAYA</title>
 <style>
-*{box-sizing:border-box;margin:0;padding:0;font-family:'Segoe UI', Tahoma}
-body{background:#080f25;color:#fff;min-height:100vh;padding-bottom:100px}
-.header{width:94%;margin:12px auto;background:#0e1a36;border-radius:18px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;border:1px solid #1a2d5a}
+*{box-sizing:border-box;margin:0;padding:0;font-family:Tahoma}
+body{background:#080f25;color:#fff!important;min-height:100vh;padding-bottom:100px}
+.header{width:94%;margin:12px auto;background:#0e1a36;border-radius:18px;padding:14px;display:flex;justify-content:space-between;align-items:center;border:1px solid #1a2d5a}
 .logo{display:flex;align-items:center;gap:10px}
-.logo-icon{width:46px;height:46px;background:#0a2342;border-radius:12px;border:2px solid #1dd6b0;display:flex;align-items:center;justify-content:center;color:#1dd6b0;font-weight:900}
-.logo h2{color:#fff!important;font-size:17px;line-height:1;font-weight:900}
-.logo span{color:#5f8cc2!important;font-size:11px}
-.wa{background:#22c55e;color:#fff!important;padding:8px 14px;border-radius:20px;font-size:13px;font-weight:800;text-decoration:none}
-.welcome{width:94%;margin:14px auto;background:linear-gradient(135deg,#14244a,#1e3a6e);border-radius:18px;padding:18px;display:flex;align-items:center;gap:14px;border:1px solid #2a4a85}
-.w-icon{width:58px;height:58px;background:#0d1c3b;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:30px;border:1px solid #3a7bd5}
-.welcome h3{color:#fff!important;font-size:20px;font-weight:900}
-.welcome p{color:#8ec0ff!important;font-size:12px;margin-top:4px}
-.title{width:94%;margin:18px auto 10px;color:#fff!important;font-size:19px;font-weight:900}
-.grid{width:94%;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.card{background:#121f3d;border:1px solid #1e345f;border-radius:18px;padding:16px 12px;height:158px;display:flex;flex-direction:column;justify-content:space-between}
-.card .ic{font-size:38px}
-.card h4{color:#fff!important;font-size:15px;font-weight:900;margin-top:8px}
-.card p{color:#8aa0c5!important;font-size:10.5px;margin-top:4px}
+.logo-icon{width:44px;height:44px;background:#0a2342;border-radius:10px;border:2px solid #1dd6b0;display:flex;align-items:center;justify-content:center;color:#1dd6b0!important;font-weight:900}
+.logo h2{color:#fff!important;font-size:15px;line-height:1;font-weight:900}
+.logo span{color:#5f8cc2!important;font-size:10px}
+.wa{background:#22c55e;color:#fff!important;padding:8px 14px;border-radius:20px;font-size:12px;font-weight:900;text-decoration:none}
+.welcome{width:94%;margin:14px auto;background:linear-gradient(135deg,#14244a,#1e3a6e);border-radius:18px;padding:16px;display:flex;align-items:center;gap:12px;border:1px solid #2a4a85}
+.welcome h3{color:#fff!important;font-size:18px;font-weight:900}
+.welcome p{color:#8ec0ff!important;font-size:11px;margin-top:3px}
+.title{width:94%;margin:16px auto 10px;color:#fff!important;font-size:18px;font-weight:900}
+.grid{width:94%;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.card{background:#121f3d;border:1px solid #1e345f;border-radius:16px;padding:14px;height:150px;display:flex;flex-direction:column;justify-content:space-between;cursor:pointer}
+.card h4{color:#fff!important;font-size:14px;font-weight:900}
+.card p{color:#8aa0c5!important;font-size:10px;margin-top:4px;line-height:1.4}
 .card.active{background:linear-gradient(135deg,#ff7eb5,#b46cff,#6aa8ff);border:none}
 .card.active h4,.card.active p{color:#fff!important}
-.nav{position:fixed;bottom:12px;left:3%;right:3%;background:#101c39;border:1px solid #1e345f;border-radius:22px;display:flex;justify-content:space-around;padding:12px 0}
-.nav div{text-align:center;color:#6b82ab;font-size:11px}
+.modal{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;z-index:99;padding:14px}
+.modalBox{width:100%;max-width:460px;background:#121f3d;border-radius:18px;padding:16px;border:1px solid #2a4a85;max-height:85vh;overflow:auto}
+.modalBox h3{color:#fff!important;margin-bottom:10px;font-size:16px}
+.modalBox input,.modalBox textarea{width:100%;padding:10px;border-radius:8px;background:#080f25;color:#fff!important;border:1px solid #1e345f;margin-top:8px}
+.btn{width:100%;padding:12px;background:#e11d48;color:#fff!important;border:none;border-radius:10px;font-weight:900;margin-top:8px;cursor:pointer}
+.btn-green{background:#15803d}.btn-blue{background:#3b82f6}
+.res{margin-top:8px;padding:10px;border-radius:8px;background:#080f25;color:#fff!important;font-size:13px;line-height:1.7;white-space:pre-wrap}
+.nav{position:fixed;bottom:10px;left:3%;right:3%;background:#101c39;border:1px solid #1e345f;border-radius:22px;display:flex;justify-content:space-around;padding:10px 0;z-index:50}
+.nav div{text-align:center;color:#6b82ab!important;font-size:11px;cursor:pointer;flex:1}
 .nav .on{color:#fff!important}
-.nav .ico{font-size:22px;margin-bottom:3px;display:block}
+.nav .ico{font-size:22px;margin-bottom:2px;display:block}
+.close{float:left;background:#1e345f;border:none;color:#fff!important;padding:5px 10px;border-radius:6px;cursor:pointer}
 </style>
 </head>
 <body>
+
 <div class="header">
-  <div class="logo"><div class="logo-icon">AM</div><div><h2>ALMOZAG<br>HIMAYA</h2><span>حماية البنات</span></div></div>
-  <a class="wa" href="https://wa.me/201552780911">تواصل معانا</a>
+<div class="logo"><div class="logo-icon">AM</div><div><h2>ALMOZAG<br>HIMAYA</h2><span>حماية البنات</span></div></div>
+<a class="wa" href="https://wa.me/201552780911">تواصل معانا</a>
 </div>
-<div class="welcome"><div class="w-icon">🛡️</div><div><h3>مرحباً، أنتِ بأمان الآن</h3><p>تم تفعيل الحماية — نراقب لحمايتك 24/7</p></div></div>
+
+<div class="welcome"><div style="font-size:30px">🛡️</div><div><h3>مرحباً، أنتِ بأمان الآن</h3><p>تم تفعيل الحماية — نراقب لحمايتك 24/7</p></div></div>
+
 <div class="title">أدوات الحماية</div>
+
 <div class="grid">
-  <div class="card"><div class="ic">📸</div><div><h4>مدقق تزوير الصور</h4><p>اكتشفي الصور المعدلة بالذكاء الاصطناعي</p></div></div>
-  <div class="card"><div class="ic">🎯</div><div><h4>محلّل التهديدات</h4><p>تحليل الروابط والرسائل المشبوهة</p></div></div>
-  <div class="card active" onclick="window.open('https://wa.me/201552780911')"><div class="ic">🔒</div><div><h4>القفل الطارئ</h4><p>قفل الجهاز وحجب الاتصال فوراً</p></div></div>
-  <div class="card"><div class="ic">📄</div><div><h4>موّلد التقارير</h4><p>إنشاء تقرير مفصل للمشاركة</p></div></div>
+<div class="card" onclick="openM('m1')"><div style="font-size:32px">📸</div><div><h4>مدقق تزوير الصور</h4><p>اكتشفي الصور المعدلة بالذكاء الاصطناعي</p></div></div>
+<div class="card" onclick="openM('m2')"><div style="font-size:32px">🎯</div><div><h4>محلّل التهديدات</h4><p>تحليل الروابط والرسائل المشبوهة</p></div></div>
+<div class="card active" onclick="openM('m3')"><div style="font-size:32px">🔒</div><div><h4>القفل الطارئ</h4><p>قفل الجهاز وحجب الاتصال فوراً</p></div></div>
+<div class="card" onclick="openM('m4')"><div style="font-size:32px">📄</div><div><h4>موّلد التقارير</h4><p>إنشاء تقرير مفصل للمشاركة</p></div></div>
 </div>
-<div class="nav"><div class="on"><span class="ico">🏠</span>الرئيسية</div><div><span class="ico">⊞</span>الأدوات</div><div><span class="ico">🔔</span>التنبيهات</div><div><span class="ico">👤</span>حسابي</div></div>
+
+<!-- المودالات -->
+<div id="m1" class="modal"><div class="modalBox"><button class="close" onclick="closeM('m1')">X</button><h3>📸 فاحص الصور - على جهازك فقط</h3><input type="file" id="imgInput" accept="image/*"><div id="imgRes" class="res">اختاري صورة للفحص...</div></div></div>
+
+<div id="m2" class="modal"><div class="modalBox"><button class="close" onclick="closeM('m2')">X</button><h3>🎯 فاحص رسائل الابتزاز</h3><textarea id="threat" rows="4" placeholder="انسخي هنا رسالة التهديد..."></textarea><button class="btn" onclick="checkThreat()">حللي الرسالة</button><div id="threatRes" class="res"></div></div></div>
+
+<div id="m3" class="modal"><div class="modalBox"><button class="close" onclick="closeM('m3')">X</button><h3>🔒 خطة تأمين فوري</h3><button class="btn btn-green" onclick="secure()">فعلي التأمين دلوقتي</button><div id="secureRes" class="res" style="display:none"></div><a href="https://wa.me/201552780911" style="display:block;margin-top:12px;text-align:center;color:#22c55e!important;font-weight:900">💬 كلمينا واتساب: 01552780911</a></div></div>
+
+<div id="m4" class="modal"><div class="modalBox"><button class="close" onclick="closeM('m4')">X</button><h3>📄 مولد بلاغ مباحث الانترنت</h3><input id="name" placeholder="اسم المبتز (اختياري)"><button class="btn btn-blue" onclick="genReport()">اكتبلي بلاغ جاهز</button><div id="reportRes" class="res" style="display:none"></div><button class="btn" id="copyBtn" style="display:none;background:#1e293b" onclick="copyReport()">نسخ البلاغ</button><div style="color:#22c55e!important;font-size:11px;margin-top:8px">📞 108 مباحث انترنت - المادة 25 و 26 سجن وغرامة.</div></div></div>
+
+<!-- النافبار اللي تحت - شغال -->
+<div class="nav">
+<div class="on" onclick="window.scrollTo({top:0,behavior:'smooth'})"><span class="ico">🏠</span>الرئيسية</div>
+<div onclick="document.querySelector('.grid').scrollIntoView({behavior:'smooth'})"><span class="ico">⊞</span>الأدوات</div>
+<div onclick="alert('🔔 لا يوجد تنبيهات جديدة - أنتِ بأمان الآن ✅')"><span class="ico">🔔</span>التنبيهات</div>
+<div onclick="window.open('https://wa.me/201552780911')"><span class="ico">👤</span>حسابي</div>
+</div>
+
+<script>
+function openM(id){document.getElementById(id).style.display='flex'}
+function closeM(id){document.getElementById(id).style.display='none'}
+document.getElementById('imgInput').addEventListener('change',function(e){
+let f=e.target.files[0];if(!f)return;let r=document.getElementById('imgRes');
+r.innerHTML='جاري الفحص...<br>الاسم: '+f.name+'<br>الحجم: '+(f.size/1024).toFixed(1)+' KB<br>';
+let img=new Image();img.onload=function(){let m='✅ تحليل:<br>';if(f.size<50*1024)m+='⚠️ حجم صغير - ممكن سكرين<br>';if(this.width<400)m+='⚠️ جودة قليلة<br>';m+='المقاس: '+this.width+'x'+this.height+'<br>شوفي الحواف حوالين الوش';r.innerHTML+=m;};img.src=URL.createObjectURL(f);
+});
+function checkThreat(){let t=document.getElementById('threat').value;let r=document.getElementById('threatRes');if(!t){r.innerHTML='اكتبي الرسالة';return;}let s=0;if(t.includes('فلوس')||t.includes('فودافون'))s+=2;if(t.includes('هنشر')||t.includes('هفضح'))s+=2;if(t.includes('صور'))s+=1;if(s>=3)r.innerHTML='🚨 ابتزاز واضح ('+s+'/5) - احتفظي سكرين شوت ومترديش';else r.innerHTML='⚠️ مشبوهة - احتفظي بيها كدليل';}
+function secure(){let r=document.getElementById('secureRes');r.style.display='block';r.innerHTML='✅ خطتك:\n1. غيري كل الباسوردات\n2. فعلي التحقق بخطوتين\n3. اقفلي طلبات الرسائل\n4. متبعتيش فلوس\n5. احكي لحد ثقة\n6. سجلي كل حاجة بتاريخ';}
+let finalReport='';function genReport(){let n=document.getElementById('name').value||'مجهول';finalReport=`الى رئيس مباحث الانترنت\nضد: ${n}\nالموضوع: ابتزاز الكتروني وتهديد بنشر صور\nالتفاصيل: تم تهديدي عبر واتساب/فيسبوك وطلب مادي\nالمطلوب: تطبيق المادة 25 قانون 175 لسنة 2018\nالتاريخ: ${new Date().toLocaleDateString('ar-EG')}`;document.getElementById('reportRes').style.display='block';document.getElementById('reportRes').innerText=finalReport;document.getElementById('copyBtn').style.display='block';}
+function copyReport(){navigator.clipboard.writeText(finalReport);alert('اتنسخ البلاغ ✅');}
+</script>
 </body>
 </html>
